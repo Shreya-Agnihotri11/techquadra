@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Railway Ticket Booking</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Company Logo">
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Book Ticket</a></li>
+                <li><a href="#">Schedules</a></li>
+                <li><a href="#">My Bookings</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+        <img src="user.png" alt="User" class="user-icon">
+    </header>
+    
+    <main>
+        <section class="search-section">
+            <div class="search-content">
+                <img src="home.jpg" alt="Search Image" class="side-image">
+
+
+                <form id="searchForm">
+                    <h2 class="section-title">Search Trains</h2>
+                    <label for="departure">Departure Station:</label>
+                    <input type="text" id="departure" name="departure" required>
+                    
+                    <label for="arrival">Arrival Station:</label>
+                    <input type="text" id="arrival" name="arrival" required>
+                    
+                    <label for="date">Date of Travel:</label>
+                    <input type="date" id="date" name="date" required>
+                    
+                    <label for="class">Class of Travel:</label>
+                    <select id="class" name="class" required>
+                        <option value="economy">Economy</option>
+                        <option value="business">Business</option>
+                        <option value="first">First Class</option>
+                    </select>
+                    
+                    <label for="passengers">Number of Passengers:</label>
+                    <input type="number" id="passengers" name="passengers" min="1" max="10" required>
+                    
+                    <button type="submit">Search Trains</button>
+                </form>
+            </div>
+        </section>
+        
+        <section class="train-options" id="trainOptions" style="display: none;">
+            <h2 class="section-title">Available Trains</h2>
+            <div id="trainList">
+            </div>
+        </section>
+        
+        <section class="booking-details" id="bookingDetails" style="display: none;">
+    <h2 class="section-title">Booking Details</h2>
+    <form id="bookingForm">
+        <div id="selectedTrain">
+        </div>
+        
+        <h3>Passenger Details</h3>
+        <div id="passengerDetails">
+        </div>
+                
+                <h3>Payment Information</h3>
+                <label for="cardNumber">Card Number:</label>
+                <input type="text" id="cardNumber" name="cardNumber" required>
+                
+                <label for="expiryDate">Expiry Date:</label>
+                <input type="month" id="expiryDate" name="expiryDate" required>
+                
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" required>
+                
+                <button type="submit">Book Ticket</button>
+            </form>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="contact-info">
+            <p>Contact us: info@railwaybooking.com</p>
+        </div>
+        <div class="social-media">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+        <div class="quick-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+        </div>
+    </footer>
+    
+    <script src="scripts.js"></script>
+</body>
+</html>
